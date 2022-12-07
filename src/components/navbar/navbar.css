@@ -1,0 +1,31 @@
+.navbar-holder{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    background: #B504F4;
+box-shadow: inset -10px -10px 10px rgba(255, 255, 255, 0.25), inset 10px 10px 20px rgba(0, 0, 0, 0.25);
+border-radius: 11px;
+}
+
+.navbar-icons{
+    font-size: 20px;
+}
+
+.icon-holder{
+    width: 80%;
+    height: 50px;
+    background: #B504F4;
+box-shadow: -2px -2px 4px rgba(255, 255, 255, 0.25), 2px 2px 4px rgba(0, 0, 0, 0.65);
+border-radius: 9px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-holder:hover{
+    background: #64127B;
+    box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.25), inset 2px 2px 4px rgba(0, 0, 0, 0.65);
+}
