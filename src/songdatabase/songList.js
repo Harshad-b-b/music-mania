@@ -33,7 +33,18 @@ export let songDatabase = [
     {
         img : './assets/tc1.jpg',
         artist : 'Arjit singh',
-        music : fourth
+        music : first
+    },
+    {
+        img : './assets/tc4.jpg',
+        name : 'Fourth',
+        artist : 'Arjit singh',
+        music : second
+    },
+    {
+        img : './assets/tc1.jpg',
+        artist : 'Arjit singh',
+        music : third
     },
     {
         img : './assets/tc4.jpg',

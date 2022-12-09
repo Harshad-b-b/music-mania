@@ -68,6 +68,10 @@ border: none;
     .song-card-design{
         width: 80%;
     }
+    .recently-played-card{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .bar-graph-wrapper{

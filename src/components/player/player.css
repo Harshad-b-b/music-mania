@@ -19,7 +19,7 @@ align-items: flex-end;
 
 .song-details{
     align-self: center;
-    width: 10%;
+    /* width: 10%; */
     color: wheat;
 }
 
@@ -58,14 +58,14 @@ align-items: flex-end;
 }
 
 .bar-graph-design{
-    width:12px;
+    width:8px;
     border: 2px solid red;
     border-bottom: none;
-    background-color: red;
+   
     align-self:flex-end;
 }
 
-.pause-play-btn button{
+.pause-play-btn .btnwa{
     padding: 0.8em;
     margin-right: 10px;
     /* margin-bottom: 5px; */
@@ -144,6 +144,12 @@ border-radius: 9px;
     width: 150px;
 }
 
+.bar-graph{
+    display:flex;
+    gap:6px;
+    width:100%;
+}
+
 .loader .bar-graph-design{
     /* background: #f1f1f1;
         height: 150%;
@@ -207,6 +213,114 @@ border-radius: 9px;
 .small-bar-graph-design:nth-child(5){
   background-color: red;
   background-color: 0.8s;
+}
+
+.bar-graph-2{
+    display:flex;
+    gap:4px;
+    width:30px;
+    height:30px;
+    align-self:flex-end;
+    margin-right: -30px ;
+}
+
+@media only screen and (min-width: 800px) {
+    .mobile-controls{
+        display: none !important;
+    }
+    .pause-play-btn{
+        padding: 0;
+
+    }
+    .bar-graph-2{
+        
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .pause-play-btn{
+        padding: 0.5em 3em;
+
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .song-card{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .song-card-design{
+        width: 80%;
+    }
+    .recently-played-card{
+        display: flex;
+        flex-direction: column;
+    }
+    /* Mobile response settings */
+    .song-operation{
+        display: none;
+    }
+    .player-holder{
+        border-radius: 5px;
+    }
+    .bar-graph{
+        display: none;
+    }
+    .controls{
+        display: none !important;
+    }
+    .player-img{
+        width: 70px !important;
+        border-radius: 50% !important;
+        margin-bottom: 10px !important;
+    }
+    .song-details{
+        width: none;
+    }
+    .mobile-controls{
+        display: flex ;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .control-icon{
+        margin-right: 10px;
+        font-size: 35px;
+        padding: 0 0.2em;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: wheat;
+    }
+    .responsive-skeer-holder{
+        position: relative;
+        top:0;
+    }
+    
+    .responsive-seek-wrapper{
+        width:90%;
+        background:#521761;
+        height:10px;
+        align-self: flex-start;
+        border-radius:3px;
+    }
+
+    .responsive-button-holder{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .bar-graph-4{
+        /* align-self: flex-end; */
+        /* justify-content: flex-end; */
+    }
+
+    .responsive-song-time{
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 

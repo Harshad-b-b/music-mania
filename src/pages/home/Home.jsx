@@ -11,28 +11,24 @@ import SongCard from "../../components/songcard/SongCard";
 import { songDatabase } from "../../songdatabase/songList";
 
 export default function Home(){
-    // let [playerItems,setPlayerItems] = React.useState({
-    //     name:"",
-    //     artist:"",
-    //     img:"",
-    //     music:""
-    // })
+   
     let [animate,setanimate] = React.useState(false);
     let [trackMusic,setTrackMusic] = React.useState(0);
     function getItemIndex(index){
         setTrackMusic(index)
         setanimate(!animate)
-        // let a = document.querySelector(`.bar-graph-3:nth-child(${index+1})`)
-        // a.style.display = "flex";
+      
     }
     const skipSong = (forwad = true) => {
         if(forwad){
+            console.log("yoo")
           setTrackMusic(()=>{
                 let temp = trackMusic;
                 temp++;
                 if(temp > songDatabase.length-1){
                     temp = 0;
                 }
+                console.log(temp,"temp")
                 return temp;
             })
         }else{
@@ -45,6 +41,8 @@ export default function Home(){
                 return temp;
             })
         }
+
+        console.log(trackMusic,"trackmusic")
 
     }
     return(
@@ -89,7 +87,7 @@ export default function Home(){
             
                 {songDatabase.map((val,index)=>{
                     return(
-                        <div>
+                        <div key={index.toString()}>
                         <SongCard playSong={()=>getItemIndex(index)} songDatabase={songDatabase} index={index} animate={animate}/>
                         </div>
                     )
@@ -103,7 +101,7 @@ export default function Home(){
             <div className="player">
             <Player
             index={trackMusic}
-             skipSong = {skipSong} /></div> 
+             skipSong = {skipSong} setIndex={setTrackMusic} /></div> 
             </div>
       
         </>

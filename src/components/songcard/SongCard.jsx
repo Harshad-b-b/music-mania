@@ -7,12 +7,10 @@ export default function SongCard({songDatabase,playSong,index,animate
     let audioEl = React.useRef(null);
     let [duration,setDuration] = React.useState("");
     useEffect(()=>{
-       console.log(audioEl.current.duration)
        let durationMinutes = Math.floor(Number(audioEl.current.duration) / 60);
        let durationSeconds = Math.floor(Number(audioEl.current.duration) - Number(durationMinutes) * 60);
-       let result = `0${durationMinutes.toString()}:${durationSeconds.toString()}`
-       setDuration(result)
-    },[duration])
+       setDuration(durationMinutes + ":" + durationSeconds)
+    },)
 
     return(
         <>
